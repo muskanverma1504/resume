@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Resume Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #232323;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #091940;
+            color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav a {
+            margin: 0 15px;
+            color: #091940;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding-bottom: 5px;
+        }
+        nav a:hover {
+            border-bottom: 2px solid #C32E47;
+        }
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #091940;
+            text-align: center;
+        }
+        p {
+            font-size: 1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .skills, .portfolio {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .skills div, .portfolio div {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #091940;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 10px;
+            padding: 12px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            background-color: #ffffff;
+            font-size: 1rem;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #C32E47;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            padding: 12px;
+            font-size: 1rem;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #091940;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            .skills div, .portfolio div {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 30px;
+            }
+            .skills div, .portfolio div {
+                width: 100%;
+            }
+            nav a {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .contact-form {
+                width: 100%;
+                padding: 10px;
+            }
+            .contact-form input, .contact-form textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to My Resume Website</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">My Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Homepage Section -->
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to my personal website where you can explore my skills, projects, and get in touch with me.</p>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I’m [Your Name], a dedicated [Your Profession] with experience in [Field]. I am passionate about technology, innovation, and problem-solving.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div>
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div>
+                <h3>Backend Development</h3>
+                <p>Node.js, Express, Python</p>
+            </div>
+            <div>
+                <h3>Database Management</h3>
+                <p>MySQL, MongoDB</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio">
+            <div>
+                <h3>Project 1</h3>
+                <p>Project Description</p>
+            </div>
+            <div>
+                <h3>Project 2</h3>
+                <p>Project Description</p>
+            </div>
+            <div>
+                <h3>Project 3</h3>
+                <p>Project Description</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Resume Website</p>
+    </footer>
+
+</body>
+</html>
